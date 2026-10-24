@@ -10,28 +10,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #050508;
-      --bg-2: #0a0a12;
-      --neon-cyan: #00f0ff;
-      --neon-magenta: #ff00aa;
-      --neon-purple: #b000ff;
-      --gold: #d4af37;
-      --gold-light: #f0d77b;
+      --bg: #05050a;
+      --bg-2: #0a0a14;
+      --neon-cyan: #00e5c7;
+      --neon-magenta: #ff2d95;
+      --neon-purple: #9b5de5;
+      --gold: #00e5c7;
+      --gold-light: #7af0e0;
       --text: #e8e8f0;
       --text-dim: #8888a0;
-      --card: rgba(15, 15, 25, 0.85);
-      --border: rgba(0, 240, 255, 0.25);
+      --card: rgba(12, 12, 22, 0.85);
+      --border: rgba(0, 229, 199, 0.25);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Rajdhani', sans-serif;
@@ -44,229 +37,114 @@
     body::before {
       content: '';
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(0, 0, 0, 0.15) 2px,
-        rgba(0, 0, 0, 0.15) 4px
-      );
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.3;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px);
+      pointer-events: none; z-index: 9999; opacity: 0.3;
     }
 
     body::after {
       content: '';
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0; width: 100%; height: 100%;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 9998;
+      pointer-events: none; z-index: 9998;
     }
 
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       padding: 1.2rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(180deg, rgba(5,5,8,0.95) 0%, transparent 100%);
+      display: flex; justify-content: space-between; align-items: center;
+      background: linear-gradient(180deg, rgba(5,5,10,0.95) 0%, transparent 100%);
       backdrop-filter: blur(10px);
     }
 
     .logo {
       font-family: 'Orbitron', sans-serif;
-      font-weight: 700;
-      font-size: 1.4rem;
-      letter-spacing: 0.15em;
+      font-weight: 700; font-size: 1.4rem; letter-spacing: 0.15em;
       color: var(--neon-cyan);
       text-shadow: 0 0 20px var(--neon-cyan);
       text-decoration: none;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      color: var(--text); text-decoration: none; font-weight: 500; font-size: 0.95rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
       transition: color 0.3s, text-shadow 0.3s;
     }
-
-    .nav-links a:hover {
-      color: var(--neon-magenta);
-      text-shadow: 0 0 12px var(--neon-magenta);
-    }
+    .nav-links a:hover { color: var(--neon-magenta); text-shadow: 0 0 12px var(--neon-magenta); }
 
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      padding: 6rem 2rem 4rem;
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      position: relative; padding: 6rem 2rem 4rem;
       background: 
-        radial-gradient(ellipse at 20% 50%, rgba(176, 0, 255, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(0, 240, 255, 0.12) 0%, transparent 40%),
-        radial-gradient(ellipse at 60% 80%, rgba(255, 0, 170, 0.1) 0%, transparent 40%),
+        radial-gradient(ellipse at 20% 50%, rgba(155, 93, 229, 0.18) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(0, 229, 199, 0.12) 0%, transparent 40%),
+        radial-gradient(ellipse at 60% 80%, rgba(255, 45, 149, 0.12) 0%, transparent 40%),
         var(--bg);
       overflow: hidden;
     }
 
     .hero-content {
-      max-width: 1200px;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      z-index: 2;
+      max-width: 1200px; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; z-index: 2;
     }
 
     .hero-text h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: clamp(2.8rem, 6vw, 4.5rem);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-magenta) 50%, var(--gold) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.4));
+      font-weight: 900; line-height: 1.05; letter-spacing: 0.05em; margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-purple) 50%, var(--neon-magenta) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      filter: drop-shadow(0 0 30px rgba(0, 229, 199, 0.4));
     }
 
     .hero-text .tagline {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 500;
-      letter-spacing: 0.35em;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+      font-size: 1.1rem; font-weight: 500; letter-spacing: 0.35em;
+      color: var(--neon-cyan); text-transform: uppercase; margin-bottom: 1.5rem;
+      text-shadow: 0 0 15px rgba(0, 229, 199, 0.5);
     }
 
-    .hero-text .subtitle {
-      font-size: 1.25rem;
-      color: var(--text-dim);
-      margin-bottom: 2rem;
-      max-width: 480px;
-    }
+    .hero-text .subtitle { font-size: 1.25rem; color: var(--text-dim); margin-bottom: 2rem; max-width: 480px; }
 
-    .hero-stats {
-      display: flex;
-      gap: 2.5rem;
-      margin-bottom: 2.5rem;
-    }
-
+    .hero-stats { display: flex; gap: 2.5rem; margin-bottom: 2.5rem; }
     .stat { text-align: left; }
+    .stat-number { font-family: 'Orbitron', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--neon-cyan); }
+    .stat-label { font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; }
 
-    .stat-number {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--neon-cyan);
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-dim);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    .cta-group {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     .btn {
-      display: inline-block;
-      padding: 0.9rem 2rem;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      display: inline-block; padding: 0.9rem 2rem;
+      font-family: 'Orbitron', sans-serif; font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+      border: none; cursor: pointer; transition: all 0.3s ease;
     }
 
     .btn-primary {
       background: linear-gradient(135deg, var(--neon-magenta), var(--neon-purple));
-      color: white;
-      box-shadow: 0 0 25px rgba(255, 0, 170, 0.4);
+      color: white; box-shadow: 0 0 25px rgba(255, 45, 149, 0.4);
     }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 40px rgba(255, 0, 170, 0.7);
-    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(255, 45, 149, 0.7); }
 
     .btn-outline {
-      background: transparent;
-      color: var(--neon-cyan);
-      border: 1px solid var(--neon-cyan);
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+      background: transparent; color: var(--neon-cyan);
+      border: 1px solid var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 229, 199, 0.2);
     }
+    .btn-outline:hover { background: rgba(0, 229, 199, 0.1); box-shadow: 0 0 30px rgba(0, 229, 199, 0.4); }
 
-    .btn-outline:hover {
-      background: rgba(0, 240, 255, 0.1);
-      box-shadow: 0 0 30px rgba(0, 240, 255, 0.4);
-    }
-
-    .hero-image {
-      position: relative;
-      display: flex;
-      justify-content: center;
-    }
-
+    .hero-image { position: relative; display: flex; justify-content: center; }
     .hero-image img {
-      width: 100%;
-      max-width: 420px;
-      border-radius: 8px;
-      box-shadow: 
-        0 0 0 1px rgba(0, 240, 255, 0.3),
-        0 0 40px rgba(255, 0, 170, 0.25),
-        0 20px 60px rgba(0, 0, 0, 0.6);
-      object-fit: cover;
-      aspect-ratio: 3/4;
+      width: 100%; max-width: 420px; border-radius: 8px;
+      box-shadow: 0 0 0 1px rgba(0, 229, 199, 0.3), 0 0 40px rgba(255, 45, 149, 0.25), 0 20px 60px rgba(0,0,0,0.6);
+      object-fit: cover; aspect-ratio: 3/4;
     }
-
     .hero-image::before {
-      content: '';
-      position: absolute;
-      inset: -15px;
-      border: 1px solid var(--neon-cyan);
-      border-radius: 12px;
-      opacity: 0.4;
+      content: ''; position: absolute; inset: -15px;
+      border: 1px solid var(--neon-cyan); border-radius: 12px; opacity: 0.4;
       animation: pulse-border 3s ease-in-out infinite;
     }
-
     @keyframes pulse-border {
       0%, 100% { opacity: 0.3; transform: scale(1); }
       50% { opacity: 0.6; transform: scale(1.01); }
@@ -277,250 +155,105 @@
 
     .section-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-align: center;
-      margin-bottom: 0.5rem;
-      color: var(--text);
+      font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700;
+      letter-spacing: 0.1em; text-align: center; margin-bottom: 0.5rem; color: var(--text);
     }
-
     .section-title span {
       background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
+    .section-subtitle { text-align: center; color: var(--text-dim); font-size: 1.1rem; margin-bottom: 3.5rem; letter-spacing: 0.05em; }
 
-    .section-subtitle {
-      text-align: center;
-      color: var(--text-dim);
-      font-size: 1.1rem;
-      margin-bottom: 3.5rem;
-      letter-spacing: 0.05em;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .about-image img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 30px rgba(176, 0, 255, 0.2);
-      object-fit: cover;
-      aspect-ratio: 4/5;
-    }
-
-    .about-text p {
-      margin-bottom: 1.2rem;
-      font-size: 1.15rem;
-      color: var(--text-dim);
-    }
-
+    .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
+    .about-image img { width: 100%; border-radius: 8px; box-shadow: 0 0 30px rgba(155, 93, 229, 0.25); object-fit: cover; aspect-ratio: 4/5; }
+    .about-text p { margin-bottom: 1.2rem; font-size: 1.15rem; color: var(--text-dim); }
     .about-text p strong { color: var(--neon-cyan); }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1.5rem;
-    }
-
+    .tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
     .tag {
-      padding: 0.4rem 1rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      color: var(--neon-cyan);
-      background: rgba(0, 240, 255, 0.05);
+      padding: 0.4rem 1rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; border: 1px solid var(--border); border-radius: 2px;
+      color: var(--neon-cyan); background: rgba(0, 229, 199, 0.05);
     }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
     .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 6px;
-      aspect-ratio: 3/4;
-      background: var(--bg-2);
-      border: 1px solid rgba(0, 240, 255, 0.15);
+      position: relative; overflow: hidden; border-radius: 6px; aspect-ratio: 3/4;
+      background: var(--bg-2); border: 1px solid rgba(0, 229, 199, 0.15);
       transition: transform 0.4s, box-shadow 0.4s;
     }
-
-    .gallery-item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(255, 0, 170, 0.25);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
-
+    .gallery-item:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(255, 45, 149, 0.25); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
     .gallery-item:hover img { transform: scale(1.05); }
-
     .gallery-item .overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 1.2rem;
-      background: linear-gradient(transparent, rgba(5,5,8,0.95));
-      opacity: 0;
-      transition: opacity 0.3s;
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem;
+      background: linear-gradient(transparent, rgba(5,5,10,0.95)); opacity: 0; transition: opacity 0.3s;
     }
-
     .gallery-item:hover .overlay { opacity: 1; }
-
     .gallery-item .overlay span {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: var(--neon-cyan);
-      text-transform: uppercase;
+      font-family: 'Orbitron', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em;
+      color: var(--neon-cyan); text-transform: uppercase;
     }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
     .service-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 2rem 1.5rem;
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
+      background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+      padding: 2rem 1.5rem; transition: all 0.3s; position: relative; overflow: hidden;
     }
-
     .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
       background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
-      transform: scaleX(0);
-      transition: transform 0.4s;
+      transform: scaleX(0); transition: transform 0.4s;
     }
-
     .service-card:hover::before { transform: scaleX(1); }
-
     .service-card:hover {
-      border-color: rgba(0, 240, 255, 0.4);
-      box-shadow: 0 10px 40px rgba(0, 240, 255, 0.1);
+      border-color: rgba(0, 229, 199, 0.4);
+      box-shadow: 0 10px 40px rgba(0, 229, 199, 0.1);
       transform: translateY(-4px);
     }
-
     .service-icon { font-size: 2rem; margin-bottom: 1rem; }
-
     .service-card h3 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.1rem;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.8rem;
-      color: var(--neon-cyan);
+      font-family: 'Orbitron', sans-serif; font-size: 1.1rem; letter-spacing: 0.08em;
+      margin-bottom: 0.8rem; color: var(--neon-cyan);
     }
-
     .service-card p { color: var(--text-dim); font-size: 0.95rem; }
 
     .bookings {
-      background: radial-gradient(ellipse at 50% 0%, rgba(255, 0, 170, 0.08) 0%, transparent 60%), var(--bg);
+      background: radial-gradient(ellipse at 50% 0%, rgba(255, 45, 149, 0.1) 0%, transparent 60%), var(--bg);
     }
-
     .booking-cta { text-align: center; max-width: 700px; margin: 0 auto; }
     .booking-cta p { font-size: 1.2rem; color: var(--text-dim); margin-bottom: 2rem; }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-    }
-
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
     .contact-info h3 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      color: var(--gold);
+      font-family: 'Orbitron', sans-serif; font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--neon-cyan);
     }
-
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
+    .contact-links { display: flex; flex-direction: column; gap: 1rem; }
     .contact-links a {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      color: var(--text);
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: color 0.3s;
+      display: flex; align-items: center; gap: 1rem;
+      color: var(--text); text-decoration: none; font-size: 1.1rem; transition: color 0.3s;
     }
-
     .contact-links a:hover { color: var(--neon-magenta); }
 
-    .social-icons {
-      display: flex;
-      gap: 1.2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-
+    .social-icons { display: flex; gap: 1.2rem; margin-top: 2rem; flex-wrap: wrap; }
     .social-icons a {
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      color: var(--neon-cyan);
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: all 0.3s;
+      width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border); border-radius: 50%;
+      color: var(--neon-cyan); text-decoration: none; font-size: 1.1rem; transition: all 0.3s;
     }
-
     .social-icons a:hover {
-      background: var(--neon-cyan);
-      color: var(--bg);
-      box-shadow: 0 0 20px var(--neon-cyan);
+      background: var(--neon-cyan); color: var(--bg); box-shadow: 0 0 20px var(--neon-cyan);
     }
 
     footer {
-      padding: 3rem 2rem;
-      text-align: center;
-      border-top: 1px solid rgba(0, 240, 255, 0.1);
-      background: var(--bg-2);
+      padding: 3rem 2rem; text-align: center;
+      border-top: 1px solid rgba(0, 229, 199, 0.1); background: var(--bg-2);
     }
-
     footer p { color: var(--text-dim); font-size: 0.9rem; letter-spacing: 0.05em; }
     footer .logo { display: block; margin-bottom: 1rem; font-size: 1.2rem; }
 
     @media (max-width: 900px) {
-      .hero-content, .about-grid, .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
+      .hero-content, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .hero-image { order: -1; }
       .nav-links { display: none; }
       .hero-stats { gap: 1.5rem; }
@@ -550,18 +283,9 @@
           From Puebla to the world.
         </p>
         <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-number">24</div>
-            <div class="stat-label">Years</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">∞</div>
-            <div class="stat-label">Stages</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">1</div>
-            <div class="stat-label">Empire</div>
-          </div>
+          <div class="stat"><div class="stat-number">24</div><div class="stat-label">Years</div></div>
+          <div class="stat"><div class="stat-number">∞</div><div class="stat-label">Stages</div></div>
+          <div class="stat"><div class="stat-number">1</div><div class="stat-label">Empire</div></div>
         </div>
         <div class="cta-group">
           <a href="#bookings" class="btn btn-primary">Book Now</a>
@@ -569,7 +293,7 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="f970b475-df7f-4600-9f3f-9aaea233802b.jpeg" alt="Keysi Kunz - The Ultimate Rave Queen">
+        <img src="f970b475-df7f-4600-9f3f-9aaea233802b.jpeg" alt="Keysi Kunz">
       </div>
     </div>
   </section>
@@ -583,20 +307,9 @@
           <img src="d1612a4f-2899-4922-8419-0140eb8d15db.jpeg" alt="Keysi Kunz Cyberpunk">
         </div>
         <div class="about-text">
-          <p>
-            I am <strong>Keysi Kunz</strong> — 24 years old, based in Puebla, Mexico, but my stage is the entire world. 
-            Traveler. Creator. Performer.
-          </p>
-          <p>
-            I merge <strong>high fashion</strong> with the raw electricity of the rave. 
-            Cyberpunk aesthetics, luxury silhouettes, and pure stage presence. 
-            Whether I’m walking for the camera or owning a pole under laser lights, 
-            I bring the same energy: absolute command.
-          </p>
-          <p>
-            My mission is clear — to become the most iconic exotic dancer and pool performer 
-            on the planet while building a fashion empire that bleeds neon and gold.
-          </p>
+          <p>I am <strong>Keysi Kunz</strong> — 24 years old, based in Puebla, Mexico, but my stage is the entire world. Traveler. Creator. Performer.</p>
+          <p>I merge <strong>high fashion</strong> with the raw electricity of the rave. Cyberpunk aesthetics, luxury silhouettes, and pure stage presence. Whether I’m walking for the camera or owning a pole under laser lights, I bring the same energy: absolute command.</p>
+          <p>My mission is clear — to become the most iconic exotic dancer and pool performer on the planet while building a fashion empire that bleeds neon and gold.</p>
           <div class="tags">
             <span class="tag">High Fashion</span>
             <span class="tag">Pole Dance</span>
@@ -615,38 +328,14 @@
       <h2 class="section-title">PORTFOLIO</h2>
       <p class="section-subtitle">Fashion • Dance • Pure Presence</p>
       <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="HS-iXsJWYAEUHTl.jpeg" alt="Pole performance">
-          <div class="overlay"><span>Stage • Leather</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="HSx8VPmakAAR3CN.jpeg" alt="Pink bunny look">
-          <div class="overlay"><span>Editorial</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="ef1d503f-7fcf-4f27-9e30-0d26cdba75dc.jpeg" alt="Pool performance">
-          <div class="overlay"><span>Pool Dancer</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="GU1tJQ3W4AALvU7.jpeg" alt="Cat ears look">
-          <div class="overlay"><span>Playful Luxury</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="GtPRe8UW0AELqke.jpeg" alt="Blue neon pole">
-          <div class="overlay"><span>Neon Stage</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="Selection_010.png" alt="Red sequin">
-          <div class="overlay"><span>Street Glam</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="NxgAa55m.jpg" alt="Portrait">
-          <div class="overlay"><span>Fine Art</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="GmHKVYLbcAQXt3R.jpeg" alt="Pink hair">
-          <div class="overlay"><span>Color Play</span></div>
-        </div>
+        <div class="gallery-item"><img src="HS-iXsJWYAEUHTl.jpeg" alt="Pole"><div class="overlay"><span>Stage • Leather</span></div></div>
+        <div class="gallery-item"><img src="HSx8VPmakAAR3CN.jpeg" alt="Bunny"><div class="overlay"><span>Editorial</span></div></div>
+        <div class="gallery-item"><img src="ef1d503f-7fcf-4f27-9e30-0d26cdba75dc.jpeg" alt="Pool"><div class="overlay"><span>Pool Dancer</span></div></div>
+        <div class="gallery-item"><img src="GU1tJQ3W4AALvU7.jpeg" alt="Cat"><div class="overlay"><span>Playful Luxury</span></div></div>
+        <div class="gallery-item"><img src="GtPRe8UW0AELqke.jpeg" alt="Neon"><div class="overlay"><span>Neon Stage</span></div></div>
+        <div class="gallery-item"><img src="Selection_010.png" alt="Red"><div class="overlay"><span>Street Glam</span></div></div>
+        <div class="gallery-item"><img src="NxgAa55m.jpg" alt="Portrait"><div class="overlay"><span>Fine Art</span></div></div>
+        <div class="gallery-item"><img src="GmHKVYLbcAQXt3R.jpeg" alt="Pink"><div class="overlay"><span>Color Play</span></div></div>
       </div>
     </div>
   </section>
@@ -656,36 +345,12 @@
       <h2 class="section-title">WHAT I <span>OFFER</span></h2>
       <p class="section-subtitle">Elite experiences. Unforgettable energy.</p>
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">✦</div>
-          <h3>Stage Shows</h3>
-          <p>High-energy exotic dance and pole performances for clubs, raves, private events and festivals. Pure spectacle.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">◈</div>
-          <h3>Pool Performances</h3>
-          <p>Sensual, artistic pool dancing designed for luxury venues, pool parties and exclusive experiences.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">◆</div>
-          <h3>Fashion Modeling</h3>
-          <p>High fashion, editorial, cyberpunk and commercial modeling. Available for campaigns, lookbooks and collaborations.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">◇</div>
-          <h3>Private Sessions</h3>
-          <p>Exclusive private performances tailored to your vision. Discreet, luxurious and unforgettable.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">◎</div>
-          <h3>In-Person Classes</h3>
-          <p>Pole dance and performance technique classes. Learn presence, strength and stage craft from the source.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">◉</div>
-          <h3>Brand Collaborations</h3>
-          <p>Open to fashion brands, nightlife labels and creative projects that match the Keysi energy.</p>
-        </div>
+        <div class="service-card"><div class="service-icon">✦</div><h3>Stage Shows</h3><p>High-energy exotic dance and pole performances for clubs, raves, private events and festivals.</p></div>
+        <div class="service-card"><div class="service-icon">◈</div><h3>Pool Performances</h3><p>Sensual, artistic pool dancing designed for luxury venues and exclusive experiences.</p></div>
+        <div class="service-card"><div class="service-icon">◆</div><h3>Fashion Modeling</h3><p>High fashion, editorial, cyberpunk and commercial modeling for campaigns and collaborations.</p></div>
+        <div class="service-card"><div class="service-icon">◇</div><h3>Private Sessions</h3><p>Exclusive private performances tailored to your vision. Discreet and unforgettable.</p></div>
+        <div class="service-card"><div class="service-icon">◎</div><h3>In-Person Classes</h3><p>Pole dance and performance technique classes. Learn presence and stage craft.</p></div>
+        <div class="service-card"><div class="service-icon">◉</div><h3>Brand Collaborations</h3><p>Open to fashion brands, nightlife labels and creative projects.</p></div>
       </div>
     </div>
   </section>
@@ -695,10 +360,7 @@
       <div class="booking-cta">
         <h2 class="section-title">BOOKINGS</h2>
         <p class="section-subtitle">Ready to elevate your event?</p>
-        <p>
-          Whether you need a show-stopping performance, a model for your campaign, 
-          or a private experience — I deliver excellence every time.
-        </p>
+        <p>Whether you need a show-stopping performance, a model for your campaign, or a private experience — I deliver excellence every time.</p>
         <div class="cta-group" style="justify-content: center;">
           <a href="#contact" class="btn btn-primary">Request Booking</a>
           <a href="https://wa.me/5212226725262" target="_blank" class="btn btn-outline">WhatsApp</a>
@@ -716,30 +378,18 @@
         <a href="https://wa.me/5212226725262" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.1rem 2.8rem;">
           CONTÁCTAME POR WHATSAPP
         </a>
-        <p style="margin-top: 1rem; color: var(--text-dim); font-size: 0.95rem;">
-          +52 1 222 672 5262
-        </p>
+        <p style="margin-top: 1rem; color: var(--text-dim); font-size: 0.95rem;">+52 1 222 672 5262</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-info">
           <h3>Direct Contact</h3>
           <div class="contact-links">
-            <a href="https://www.instagram.com/keysi.kunz/" target="_blank">
-              <span>◉</span> Instagram @keysi.kunz
-            </a>
-            <a href="https://www.tiktok.com/@keysi_kunzz" target="_blank">
-              <span>◉</span> TikTok @keysi_kunzz
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61595880147457" target="_blank">
-              <span>◉</span> Facebook
-            </a>
-            <a href="https://t.me/wesichika69" target="_blank">
-              <span>◉</span> Telegram @wesichika69
-            </a>
-            <a href="https://wa.me/5212226725262" target="_blank">
-              <span>◉</span> WhatsApp +52 1 222 672 5262
-            </a>
+            <a href="https://www.instagram.com/keysi.kunz/" target="_blank"><span>◉</span> Instagram @keysi.kunz</a>
+            <a href="https://www.tiktok.com/@keysi_kunzz" target="_blank"><span>◉</span> TikTok @keysi_kunzz</a>
+            <a href="https://www.facebook.com/profile.php?id=61595880147457" target="_blank"><span>◉</span> Facebook</a>
+            <a href="https://t.me/wesichika69" target="_blank"><span>◉</span> Telegram @wesichika69</a>
+            <a href="https://wa.me/5212226725262" target="_blank"><span>◉</span> WhatsApp +52 1 222 672 5262</a>
           </div>
           <div class="social-icons">
             <a href="https://www.instagram.com/keysi.kunz/" target="_blank" title="Instagram">IG</a>
@@ -755,10 +405,7 @@
             Puebla, México<br>
             <span style="color: var(--neon-cyan);">Available worldwide</span>
           </p>
-          <p style="color: var(--text-dim);">
-            For bookings, collaborations and private inquiries, reach out via WhatsApp or Telegram. 
-            Response within 24–48h.
-          </p>
+          <p style="color: var(--text-dim);">For bookings, collaborations and private inquiries, reach out via WhatsApp or Telegram. Response within 24–48h.</p>
         </div>
       </div>
     </div>
@@ -779,7 +426,6 @@
         }
       });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.service-card, .gallery-item, .about-grid > *').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(30px)';
