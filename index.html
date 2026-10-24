@@ -41,7 +41,6 @@
       overflow-x: hidden;
     }
 
-    /* Scanline overlay */
     body::before {
       content: '';
       position: fixed;
@@ -61,7 +60,6 @@
       opacity: 0.3;
     }
 
-    /* Noise texture */
     body::after {
       content: '';
       position: fixed;
@@ -74,7 +72,6 @@
       z-index: 9998;
     }
 
-    /* Navigation */
     nav {
       position: fixed;
       top: 0;
@@ -120,7 +117,6 @@
       text-shadow: 0 0 12px var(--neon-magenta);
     }
 
-    /* Hero */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -184,9 +180,7 @@
       margin-bottom: 2.5rem;
     }
 
-    .stat {
-      text-align: left;
-    }
+    .stat { text-align: left; }
 
     .stat-number {
       font-family: 'Orbitron', sans-serif;
@@ -220,8 +214,6 @@
       border: none;
       cursor: pointer;
       transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
     }
 
     .btn-primary {
@@ -280,16 +272,8 @@
       50% { opacity: 0.6; transform: scale(1.01); }
     }
 
-    /* Sections */
-    section {
-      padding: 6rem 2rem;
-      position: relative;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+    section { padding: 6rem 2rem; position: relative; }
+    .container { max-width: 1200px; margin: 0 auto; }
 
     .section-title {
       font-family: 'Orbitron', sans-serif;
@@ -316,7 +300,6 @@
       letter-spacing: 0.05em;
     }
 
-    /* About */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -338,9 +321,7 @@
       color: var(--text-dim);
     }
 
-    .about-text p strong {
-      color: var(--neon-cyan);
-    }
+    .about-text p strong { color: var(--neon-cyan); }
 
     .tags {
       display: flex;
@@ -361,7 +342,6 @@
       background: rgba(0, 240, 255, 0.05);
     }
 
-    /* Portfolio / Gallery */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -390,9 +370,7 @@
       transition: transform 0.5s;
     }
 
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
+    .gallery-item:hover img { transform: scale(1.05); }
 
     .gallery-item .overlay {
       position: absolute;
@@ -405,9 +383,7 @@
       transition: opacity 0.3s;
     }
 
-    .gallery-item:hover .overlay {
-      opacity: 1;
-    }
+    .gallery-item:hover .overlay { opacity: 1; }
 
     .gallery-item .overlay span {
       font-family: 'Orbitron', sans-serif;
@@ -417,7 +393,6 @@
       text-transform: uppercase;
     }
 
-    /* Services */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -446,9 +421,7 @@
       transition: transform 0.4s;
     }
 
-    .service-card:hover::before {
-      transform: scaleX(1);
-    }
+    .service-card:hover::before { transform: scaleX(1); }
 
     .service-card:hover {
       border-color: rgba(0, 240, 255, 0.4);
@@ -456,10 +429,7 @@
       transform: translateY(-4px);
     }
 
-    .service-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+    .service-icon { font-size: 2rem; margin-bottom: 1rem; }
 
     .service-card h3 {
       font-family: 'Orbitron', sans-serif;
@@ -469,31 +439,15 @@
       color: var(--neon-cyan);
     }
 
-    .service-card p {
-      color: var(--text-dim);
-      font-size: 0.95rem;
-    }
+    .service-card p { color: var(--text-dim); font-size: 0.95rem; }
 
-    /* Bookings */
     .bookings {
-      background: 
-        radial-gradient(ellipse at 50% 0%, rgba(255, 0, 170, 0.08) 0%, transparent 60%),
-        var(--bg);
+      background: radial-gradient(ellipse at 50% 0%, rgba(255, 0, 170, 0.08) 0%, transparent 60%), var(--bg);
     }
 
-    .booking-cta {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-    }
+    .booking-cta { text-align: center; max-width: 700px; margin: 0 auto; }
+    .booking-cta p { font-size: 1.2rem; color: var(--text-dim); margin-bottom: 2rem; }
 
-    .booking-cta p {
-      font-size: 1.2rem;
-      color: var(--text-dim);
-      margin-bottom: 2rem;
-    }
-
-    /* Contact */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -523,14 +477,13 @@
       transition: color 0.3s;
     }
 
-    .contact-links a:hover {
-      color: var(--neon-magenta);
-    }
+    .contact-links a:hover { color: var(--neon-magenta); }
 
     .social-icons {
       display: flex;
       gap: 1.2rem;
       margin-top: 2rem;
+      flex-wrap: wrap;
     }
 
     .social-icons a {
@@ -543,7 +496,7 @@
       border-radius: 50%;
       color: var(--neon-cyan);
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       transition: all 0.3s;
     }
 
@@ -553,7 +506,6 @@
       box-shadow: 0 0 20px var(--neon-cyan);
     }
 
-    /* Footer */
     footer {
       padding: 3rem 2rem;
       text-align: center;
@@ -561,43 +513,21 @@
       background: var(--bg-2);
     }
 
-    footer p {
-      color: var(--text-dim);
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
-    }
+    footer p { color: var(--text-dim); font-size: 0.9rem; letter-spacing: 0.05em; }
+    footer .logo { display: block; margin-bottom: 1rem; font-size: 1.2rem; }
 
-    footer .logo {
-      display: block;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-    }
-
-    /* Responsive */
     @media (max-width: 900px) {
-      .hero-content,
-      .about-grid,
-      .contact-grid {
+      .hero-content, .about-grid, .contact-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
-
-      .hero-image {
-        order: -1;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero-stats {
-        gap: 1.5rem;
-      }
+      .hero-image { order: -1; }
+      .nav-links { display: none; }
+      .hero-stats { gap: 1.5rem; }
     }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
   <nav>
     <a href="#" class="logo">KEYSI KUNZ</a>
     <ul class="nav-links">
@@ -609,7 +539,6 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
       <div class="hero-text">
@@ -640,19 +569,18 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="images/club-face.jpeg" alt="Keysi Kunz - The Ultimate Rave Queen">
+        <img src="f970b475-df7f-4600-9f3f-9aaea233802b.jpeg" alt="Keysi Kunz - The Ultimate Rave Queen">
       </div>
     </div>
   </section>
 
-  <!-- About -->
   <section id="about">
     <div class="container">
       <h2 class="section-title">ABOUT <span>ME</span></h2>
       <p class="section-subtitle">Born to dominate the neon night</p>
       <div class="about-grid">
         <div class="about-image">
-          <img src="images/cyber-city.jpeg" alt="Keysi Kunz Cyberpunk">
+          <img src="d1612a4f-2899-4922-8419-0140eb8d15db.jpeg" alt="Keysi Kunz Cyberpunk">
         </div>
         <div class="about-text">
           <p>
@@ -682,49 +610,47 @@
     </div>
   </section>
 
-  <!-- Portfolio / Gallery -->
   <section id="portfolio" style="background: var(--bg-2);">
     <div class="container">
       <h2 class="section-title">PORTFOLIO</h2>
       <p class="section-subtitle">Fashion • Dance • Pure Presence</p>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="images/pole-leather.jpeg" alt="Pole performance">
+          <img src="HS-iXsJWYAEUHTl.jpeg" alt="Pole performance">
           <div class="overlay"><span>Stage • Leather</span></div>
         </div>
         <div class="gallery-item">
-          <img src="images/pink-bunny.jpeg" alt="Pink bunny look">
+          <img src="HSx8VPmakAAR3CN.jpeg" alt="Pink bunny look">
           <div class="overlay"><span>Editorial</span></div>
         </div>
         <div class="gallery-item">
-          <img src="images/pool-table.jpeg" alt="Pool performance">
+          <img src="ef1d503f-7fcf-4f27-9e30-0d26cdba75dc.jpeg" alt="Pool performance">
           <div class="overlay"><span>Pool Dancer</span></div>
         </div>
         <div class="gallery-item">
-          <img src="images/cat-ears.jpeg" alt="Cat ears look">
+          <img src="GU1tJQ3W4AALvU7.jpeg" alt="Cat ears look">
           <div class="overlay"><span>Playful Luxury</span></div>
         </div>
         <div class="gallery-item">
-          <img src="images/pole-blue.jpeg" alt="Blue neon pole">
+          <img src="GtPRe8UW0AELqke.jpeg" alt="Blue neon pole">
           <div class="overlay"><span>Neon Stage</span></div>
         </div>
         <div class="gallery-item">
-          <img src="images/red-top.png" alt="Red sequin">
+          <img src="Selection_010.png" alt="Red sequin">
           <div class="overlay"><span>Street Glam</span></div>
         </div>
         <div class="gallery-item">
-          <img src="images/nude-portrait.jpg" alt="Portrait">
+          <img src="NxgAa55m.jpg" alt="Portrait">
           <div class="overlay"><span>Fine Art</span></div>
         </div>
         <div class="gallery-item">
-          <img src="images/pink-hair.jpeg" alt="Pink hair">
+          <img src="GmHKVYLbcAQXt3R.jpeg" alt="Pink hair">
           <div class="overlay"><span>Color Play</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
   <section id="services">
     <div class="container">
       <h2 class="section-title">WHAT I <span>OFFER</span></h2>
@@ -764,7 +690,6 @@
     </div>
   </section>
 
-  <!-- Bookings -->
   <section id="bookings" class="bookings">
     <div class="container">
       <div class="booking-cta">
@@ -776,17 +701,26 @@
         </p>
         <div class="cta-group" style="justify-content: center;">
           <a href="#contact" class="btn btn-primary">Request Booking</a>
-          <a href="https://www.instagram.com/keysi.kunz/" target="_blank" class="btn btn-outline">DM on Instagram</a>
+          <a href="https://wa.me/5212226725262" target="_blank" class="btn btn-outline">WhatsApp</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title">GET IN <span>TOUCH</span></h2>
       <p class="section-subtitle">Let’s create something legendary</p>
+      
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <a href="https://wa.me/5212226725262" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.1rem 2.8rem;">
+          CONTÁCTAME POR WHATSAPP
+        </a>
+        <p style="margin-top: 1rem; color: var(--text-dim); font-size: 0.95rem;">
+          +52 1 222 672 5262
+        </p>
+      </div>
+
       <div class="contact-grid">
         <div class="contact-info">
           <h3>Direct Contact</h3>
@@ -800,11 +734,19 @@
             <a href="https://www.facebook.com/profile.php?id=61595880147457" target="_blank">
               <span>◉</span> Facebook
             </a>
+            <a href="https://t.me/wesichika69" target="_blank">
+              <span>◉</span> Telegram @wesichika69
+            </a>
+            <a href="https://wa.me/5212226725262" target="_blank">
+              <span>◉</span> WhatsApp +52 1 222 672 5262
+            </a>
           </div>
           <div class="social-icons">
             <a href="https://www.instagram.com/keysi.kunz/" target="_blank" title="Instagram">IG</a>
             <a href="https://www.tiktok.com/@keysi_kunzz" target="_blank" title="TikTok">TT</a>
             <a href="https://www.facebook.com/profile.php?id=61595880147457" target="_blank" title="Facebook">FB</a>
+            <a href="https://t.me/wesichika69" target="_blank" title="Telegram">TG</a>
+            <a href="https://wa.me/5212226725262" target="_blank" title="WhatsApp">WA</a>
           </div>
         </div>
         <div class="contact-info">
@@ -814,15 +756,14 @@
             <span style="color: var(--neon-cyan);">Available worldwide</span>
           </p>
           <p style="color: var(--text-dim);">
-            For bookings, collaborations and private inquiries, reach out via Instagram DM 
-            or the platforms above. Response within 24–48h.
+            For bookings, collaborations and private inquiries, reach out via WhatsApp or Telegram. 
+            Response within 24–48h.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <a href="#" class="logo">KEYSI KUNZ</a>
     <p>The Ultimate Rave Queen © 2026</p>
@@ -830,7 +771,6 @@
   </footer>
 
   <script>
-    // Smooth reveal on scroll (simple)
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
