@@ -21,7 +21,7 @@
     .lang-btn{font-family:Orbitron,sans-serif;font-size:.7rem;font-weight:600;padding:.35rem .55rem;background:transparent;border:none;color:var(--dim);cursor:pointer;border-radius:4px;transition:.25s}
     .lang-btn.active,.lang-btn:hover{background:var(--cyan);color:var(--bg);box-shadow:0 0 12px rgba(0,229,199,.4)}
     .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:6rem 2rem 4rem;background:radial-gradient(ellipse at 20% 50%,rgba(155,93,229,.18),transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(0,229,199,.12),transparent 40%),radial-gradient(ellipse at 60% 80%,rgba(255,45,149,.12),transparent 40%),var(--bg)}
-    .hero-content{max-width:1200px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .hero-content{max-width:1280px;width:100%;display:grid;grid-template-columns:1fr 1.15fr;gap:3rem;align-items:center}
     .hero-text h1{font-family:Orbitron,sans-serif;font-size:clamp(2.8rem,6vw,4.5rem);font-weight:900;line-height:1.05;letter-spacing:.05em;margin-bottom:.5rem;background:linear-gradient(135deg,var(--cyan),var(--purple),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 30px rgba(0,229,199,.4))}
     .tagline{font-family:Orbitron,sans-serif;font-size:1.05rem;font-weight:500;letter-spacing:.35em;color:var(--cyan);text-transform:uppercase;margin-bottom:1.5rem;text-shadow:0 0 15px rgba(0,229,199,.5)}
     .subtitle{font-size:1.2rem;color:var(--dim);margin-bottom:2rem;max-width:480px}
@@ -38,11 +38,11 @@
     .btn-sm{padding:.55rem 1rem;font-size:.7rem}
     .btn-of{border-color:#00aff0;color:#00aff0}.btn-of:hover{background:rgba(0,175,240,.15);box-shadow:0 0 20px rgba(0,175,240,.3)}
     .btn-tg{border-color:#2AABEE;color:#2AABEE}.btn-tg:hover{background:rgba(42,171,238,.15)}
-    .hero-image{position:relative;display:flex;justify-content:center}
-    .hero-image .media-wrap{width:100%;max-width:420px;border-radius:8px;overflow:hidden;aspect-ratio:3/4;position:relative;box-shadow:0 0 0 1px rgba(0,229,199,.3),0 0 40px rgba(255,45,149,.25),0 20px 60px rgba(0,0,0,.6)}
+    .hero-image{position:relative;display:flex;justify-content:center;width:100%}.hero-image>div{width:100%;max-width:560px}
+    .hero-image .media-wrap{width:100%;max-width:560px;border-radius:10px;overflow:hidden;aspect-ratio:3/4;position:relative;box-shadow:0 0 0 1px rgba(0,229,199,.3),0 0 50px rgba(255,45,149,.3),0 25px 70px rgba(0,0,0,.65)}
     .hero-image .media-wrap img,.hero-image .media-wrap video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0;transition:opacity .8s}
     .hero-image .media-wrap img.active,.hero-image .media-wrap video.active{opacity:1}
-    .hero-image::before{content:'';position:absolute;inset:-15px;border:1px solid var(--cyan);border-radius:12px;opacity:.4;animation:pulse 3s ease-in-out infinite;pointer-events:none}
+    .hero-image::before{content:'';position:absolute;inset:-12px;border:1px solid var(--cyan);border-radius:14px;opacity:.45;animation:pulse 3s ease-in-out infinite;pointer-events:none;max-width:584px;left:50%;transform:translateX(-50%);width:100%}
     @keyframes pulse{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:.6;transform:scale(1.01)}}
     .hero-dots{display:flex;gap:.4rem;justify-content:center;margin-top:1rem}
     .hero-dots span{width:8px;height:8px;border-radius:50%;background:rgba(0,229,199,.3);cursor:pointer;transition:.3s}
@@ -91,7 +91,7 @@
     footer{padding:3rem 2rem;text-align:center;border-top:1px solid rgba(0,229,199,.1);background:var(--bg-2)}
     footer p{color:var(--dim);font-size:.9rem}
     footer .logo{display:block;margin-bottom:1rem;font-size:1.2rem}
-    @media(max-width:900px){.hero-content,.about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem}.hero-image{order:-1}.nav-links{display:none}.hero-stats{gap:1.5rem}}
+    @media(max-width:900px){.hero-content,.about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem}.hero-image{order:-1}.nav-links{display:none}.hero-stats{gap:1.5rem}.hero-image .media-wrap{max-width:100%}}
   </style>
 </head>
 <body>
