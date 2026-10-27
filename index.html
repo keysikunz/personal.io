@@ -1,1 +1,327 @@
-<PLACEHOLDER>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keysi Kunz — Pop · K-Pop · Otaku</title>
+  <meta name="description" content="Keysi Kunz | Pool Dancer • Top Performer • Content Creator • Pop & K-Pop">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#05050a;--bg-2:#0a0a14;--cyan:#00e5c7;--pink:#ff2d95;--purple:#9b5de5;--text:#e8e8f0;--dim:#8888a0;--card:rgba(12,12,22,.85);--border:rgba(0,229,199,.25)}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Rajdhani,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.15) 2px,rgba(0,0,0,.15) 4px);pointer-events:none;z-index:9999;opacity:.3}
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(5,5,10,.95),transparent);backdrop-filter:blur(10px)}
+    .logo{font-family:Orbitron,sans-serif;font-weight:700;font-size:1.4rem;letter-spacing:.15em;color:var(--cyan);text-shadow:0 0 20px var(--cyan);text-decoration:none}
+    .nav-right{display:flex;align-items:center;gap:1.2rem}
+    .nav-links{display:flex;gap:1.3rem;list-style:none}
+    .nav-links a{color:var(--text);text-decoration:none;font-weight:500;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;transition:.3s}
+    .nav-links a:hover{color:var(--pink);text-shadow:0 0 12px var(--pink)}
+    .lang-switch{display:flex;gap:.3rem;background:rgba(0,229,199,.08);border:1px solid var(--border);border-radius:6px;padding:.25rem}
+    .lang-btn{font-family:Orbitron,sans-serif;font-size:.7rem;font-weight:600;padding:.35rem .55rem;background:transparent;border:none;color:var(--dim);cursor:pointer;border-radius:4px;transition:.25s}
+    .lang-btn.active,.lang-btn:hover{background:var(--cyan);color:var(--bg);box-shadow:0 0 12px rgba(0,229,199,.4)}
+    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:6rem 2rem 4rem;background:radial-gradient(ellipse at 20% 50%,rgba(155,93,229,.18),transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(0,229,199,.12),transparent 40%),radial-gradient(ellipse at 60% 80%,rgba(255,45,149,.12),transparent 40%),var(--bg)}
+    .hero-content{max-width:1280px;width:100%;display:grid;grid-template-columns:1fr 1.15fr;gap:3rem;align-items:center}
+    .hero-text h1{font-family:Orbitron,sans-serif;font-size:clamp(2.8rem,6vw,4.5rem);font-weight:900;line-height:1.05;letter-spacing:.05em;margin-bottom:.5rem;background:linear-gradient(135deg,var(--cyan),var(--purple),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 30px rgba(0,229,199,.4))}
+    .tagline{font-family:Orbitron,sans-serif;font-size:1.05rem;font-weight:500;letter-spacing:.35em;color:var(--cyan);text-transform:uppercase;margin-bottom:1.5rem;text-shadow:0 0 15px rgba(0,229,199,.5)}
+    .subtitle{font-size:1.2rem;color:var(--dim);margin-bottom:2rem;max-width:480px}
+    .hero-stats{display:flex;gap:2.5rem;margin-bottom:1.5rem}
+    .stat-number{font-family:Orbitron,sans-serif;font-size:1.8rem;font-weight:700;color:var(--cyan)}
+    .stat-label{font-size:.85rem;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
+    .badge-18{display:flex;flex-direction:column;align-items:center}
+    .plus18{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Orbitron,sans-serif;font-weight:900;font-size:1.15rem;letter-spacing:.05em;color:#ff2d95;background:radial-gradient(circle at 30% 30%,#1a0a14 0%,#05050a 70%);border:2px solid #00e5c7;box-shadow:0 0 0 3px rgba(0,229,199,.15),0 0 20px rgba(255,45,149,.45),inset 0 0 20px rgba(0,229,199,.15);text-shadow:0 0 12px #ff2d95;position:relative}
+    .plus18::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px dashed rgba(0,229,199,.5);animation:spin18 12s linear infinite}
+    @keyframes spin18{to{transform:rotate(360deg)}}
+    .cta-group{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1rem}
+    .quick-links{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem}
+    .btn{display:inline-block;padding:.85rem 1.6rem;font-family:Orbitron,sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:.3s;border-radius:2px}
+    .btn-primary{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;box-shadow:0 0 25px rgba(255,45,149,.4)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(255,45,149,.7)}
+    .btn-outline{background:transparent;color:var(--cyan);border:1px solid var(--cyan);box-shadow:0 0 15px rgba(0,229,199,.2)}
+    .btn-outline:hover{background:rgba(0,229,199,.1);box-shadow:0 0 30px rgba(0,229,199,.4)}
+    .btn-sm{padding:.55rem 1rem;font-size:.7rem}
+    .btn-of{border-color:#00aff0;color:#00aff0}.btn-of:hover{background:rgba(0,175,240,.15);box-shadow:0 0 20px rgba(0,175,240,.3)}
+    .btn-tg{border-color:#2AABEE;color:#2AABEE}.btn-tg:hover{background:rgba(42,171,238,.15)}
+    .hero-image{position:relative;display:flex;justify-content:center;width:100%}.hero-image>div{width:100%;max-width:560px}
+    .hero-image .media-wrap{width:100%;max-width:560px;border-radius:10px;overflow:hidden;aspect-ratio:3/4;position:relative;box-shadow:0 0 0 1px rgba(0,229,199,.3),0 0 50px rgba(255,45,149,.3),0 25px 70px rgba(0,0,0,.65)}
+    .hero-image .media-wrap img,.hero-image .media-wrap video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0;transition:opacity .8s}
+    .hero-image .media-wrap img.active,.hero-image .media-wrap video.active{opacity:1}
+    .hero-image::before{content:'';position:absolute;inset:-12px;border:1px solid var(--cyan);border-radius:14px;opacity:.45;animation:pulse 3s ease-in-out infinite;pointer-events:none;max-width:584px;left:50%;transform:translateX(-50%);width:100%}
+    @keyframes pulse{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:.6;transform:scale(1.01)}}
+    .hero-dots{display:flex;gap:.4rem;justify-content:center;margin-top:1rem}
+    .hero-dots span{width:8px;height:8px;border-radius:50%;background:rgba(0,229,199,.3);cursor:pointer;transition:.3s}
+    .hero-dots span.active{background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+    section{padding:5.5rem 2rem}
+    .container{max-width:1200px;margin:0 auto}
+    .section-title{font-family:Orbitron,sans-serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;letter-spacing:.1em;text-align:center;margin-bottom:.5rem}
+    .section-title span{background:linear-gradient(90deg,var(--cyan),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .section-subtitle{text-align:center;color:var(--dim);font-size:1.1rem;margin-bottom:3rem}
+    .about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:center}
+    .about-image img{width:100%;border-radius:8px;box-shadow:0 0 30px rgba(155,93,229,.25);object-fit:cover;aspect-ratio:4/5}
+    .about-text p{margin-bottom:1.2rem;font-size:1.15rem;color:var(--dim)}
+    .about-text p strong{color:var(--cyan)}
+    .tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
+    .tag{padding:.4rem 1rem;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--border);border-radius:2px;color:var(--cyan);background:rgba(0,229,199,.05)}
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem}
+    .gallery-item{position:relative;overflow:hidden;border-radius:6px;aspect-ratio:3/4;background:var(--bg-2);border:1px solid rgba(0,229,199,.15);transition:.4s}
+    .gallery-item:hover{transform:translateY(-8px);box-shadow:0 15px 40px rgba(255,45,149,.25)}
+    .gallery-item img,.gallery-item video{width:100%;height:100%;object-fit:cover;transition:.5s}
+    .gallery-item:hover img{transform:scale(1.05)}
+    .gallery-item .overlay{position:absolute;bottom:0;left:0;right:0;padding:1.2rem;background:linear-gradient(transparent,rgba(5,5,10,.95));opacity:0;transition:.3s}
+    .gallery-item:hover .overlay{opacity:1}
+    .gallery-item .overlay span{font-family:Orbitron,sans-serif;font-size:.75rem;letter-spacing:.1em;color:var(--cyan);text-transform:uppercase}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+    .service-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:2rem 1.5rem;transition:.3s;position:relative;overflow:hidden}
+    .service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--cyan),var(--pink));transform:scaleX(0);transition:.4s}
+    .service-card:hover::before{transform:scaleX(1)}
+    .service-card:hover{border-color:rgba(0,229,199,.4);box-shadow:0 10px 40px rgba(0,229,199,.1);transform:translateY(-4px)}
+    .service-icon{font-size:2rem;margin-bottom:1rem}
+    .service-card h3{font-family:Orbitron,sans-serif;font-size:1.05rem;letter-spacing:.08em;margin-bottom:.8rem;color:var(--cyan)}
+    .service-card p{color:var(--dim);font-size:.95rem}
+    .bookings{background:radial-gradient(ellipse at 50% 0%,rgba(255,45,149,.1),transparent 60%),var(--bg)}
+    .booking-cta{text-align:center;max-width:700px;margin:0 auto}
+    .booking-cta p{font-size:1.2rem;color:var(--dim);margin-bottom:2rem}
+    .music-section{background:var(--bg-2)}
+    .spotify-wrap{max-width:700px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 0 40px rgba(0,229,199,.1)}
+    .spotify-wrap iframe{display:block;width:100%;border:none}
+    .tiktok-section{background:var(--bg)}
+    .tiktok-frame{max-width:820px;margin:0 auto;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 0 40px rgba(0,229,199,.12)}
+    .social-btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.5rem}
+    .social-btn{display:inline-flex;align-items:center;gap:.55rem;padding:.65rem 1.1rem;border-radius:8px;font-family:Orbitron,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid var(--border);color:var(--text);background:rgba(0,229,199,.04);transition:.3s}
+    .social-btn svg{width:18px;height:18px;flex-shrink:0}
+    .social-btn:hover{transform:translateY(-2px);box-shadow:0 0 20px rgba(0,229,199,.25)}
+    .social-btn.ig:hover{border-color:#E4405F;color:#E4405F;box-shadow:0 0 20px rgba(228,64,95,.3)}
+    .social-btn.tt:hover{border-color:#00f2ea;color:#00f2ea;box-shadow:0 0 20px rgba(0,242,234,.3)}
+    .social-btn.fb:hover{border-color:#1877F2;color:#1877F2;box-shadow:0 0 20px rgba(24,119,242,.3)}
+    .social-btn.of:hover{border-color:#00aff0;color:#00aff0;box-shadow:0 0 20px rgba(0,175,240,.3)}
+    .social-btn.tg:hover{border-color:#2AABEE;color:#2AABEE;box-shadow:0 0 20px rgba(42,171,238,.3)}
+    .social-btn.wa:hover{border-color:#25D366;color:#25D366;box-shadow:0 0 20px rgba(37,211,102,.3)}
+    .social-btn.x:hover{border-color:#fff;color:#fff;box-shadow:0 0 20px rgba(255,255,255,.25)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+    .contact-info h3{font-family:Orbitron,sans-serif;font-size:1.2rem;margin-bottom:1.5rem;color:var(--cyan)}
+    footer{padding:3rem 2rem;text-align:center;border-top:1px solid rgba(0,229,199,.1);background:var(--bg-2)}
+    footer p{color:var(--dim);font-size:.9rem}
+    footer .logo{display:block;margin-bottom:1rem;font-size:1.2rem}
+    @media(max-width:900px){.hero-content,.about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem}.hero-image{order:-1}.nav-links{display:none}.hero-stats{gap:1.5rem}.hero-image .media-wrap{max-width:100%}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" class="logo">KEYSI KUNZ</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="#bookings" data-i18n="nav_bookings">Bookings</a></li>
+        <li><a href="#music" data-i18n="nav_music">Music</a></li>
+        <li><a href="#tiktok" data-i18n="nav_tiktok">TikTok</a></li>
+        <li><a href="#videos" data-i18n="nav_videos">Videos</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="tagline" data-i18n="tagline">Pool Dancer • Top Performer • Otaku</div>
+        <h1>KEYSI<br>KUNZ</h1>
+        <p class="subtitle" data-i18n="subtitle">The Ultimate Pop & K-Pop Queen.<br>Top Model • Exotic Dancer • Pool Performer.<br>From Puebla to the world.</p>
+        <div class="hero-stats">
+          <div class="stat badge-18"><div class="plus18">+18</div><div class="stat-label">ADULT</div></div>
+          <div class="stat"><div class="stat-number">∞</div><div class="stat-label" data-i18n="stat_stages">Stages</div></div>
+          <div class="stat"><div class="stat-number">1</div><div class="stat-label" data-i18n="stat_empire">Empire</div></div>
+        </div>
+        <div class="cta-group">
+          <a href="#bookings" class="btn btn-primary" data-i18n="btn_book">Book Now</a>
+          <a href="#portfolio" class="btn btn-outline" data-i18n="btn_portfolio">View Portfolio</a>
+        </div>
+        <div class="quick-links">
+          <a href="https://onlyfans.com/zzugu" target="_blank" class="btn btn-outline btn-sm btn-of">OnlyFans</a>
+          <a href="https://t.me/+fgLO-B1Mq0QxZWQx" target="_blank" class="btn btn-outline btn-sm btn-tg">TG Channel</a>
+          <a href="https://t.me/Dalila_kunz" target="_blank" class="btn btn-outline btn-sm btn-tg">TG Private</a>
+          <a href="https://wa.me/5212211957772" target="_blank" class="btn btn-outline btn-sm">WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div>
+          <div class="media-wrap" id="heroMedia">
+            <img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_003.jpeg" class="active" alt="Keysi 1">
+            <img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_001.jpeg" alt="Keysi 2">
+            <img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_006.jpeg" alt="Keysi 3">
+            <img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_007.jpeg" alt="Keysi 4">
+            <img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_002.jpeg" alt="Keysi 5">
+            <img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_005.jpeg" alt="Keysi 6">
+            <img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_004.jpeg" alt="Keysi 7">
+            <img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_009.png" alt="Keysi 8">
+            <img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_008.jpg" alt="Keysi 9">
+            <img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_eyes_001.jpeg" alt="Keysi 10">
+          </div>
+          <div class="hero-dots" id="heroDots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title" data-i18n="about_title">ABOUT <span>ME</span></h2>
+      <p class="section-subtitle" data-i18n="about_sub">Born to dominate the neon night</p>
+      <div class="about-grid">
+        <div class="about-image"><img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_001.jpeg" alt="About"></div>
+        <div class="about-text">
+          <p data-i18n="about_p1">I am <strong>Keysi Kunz</strong> — based in Puebla, Mexico, but my stage is the entire world. Traveler. Creator. Performer.</p>
+          <p data-i18n="about_p2">I merge <strong>pool dance</strong> with the energy of pop, K-pop and otaku stages. Cyber Otaku aesthetics, luxury silhouettes, and pure stage presence.</p>
+          <p data-i18n="about_p3">My mission is clear — to become the most iconic exotic dancer and pool performer on the planet while building a fashion empire that bleeds neon and gold.</p>
+          <div class="tags">
+            <span class="tag" data-i18n="tag1">Pool Dancer</span>
+            <span class="tag" data-i18n="tag2">Pole Dance</span>
+            <span class="tag" data-i18n="tag3">Pool Performances</span>
+            <span class="tag" data-i18n="tag4">Content Creator</span>
+            <span class="tag" data-i18n="tag5">Cyber Otaku</span>
+            <span class="tag" data-i18n="tag6">K-Pop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" style="background:var(--bg-2)">
+    <div class="container">
+      <h2 class="section-title" data-i18n="portfolio_title">PORTFOLIO</h2>
+      <p class="section-subtitle" data-i18n="portfolio_sub">Fashion • Dance • Pure Presence</p>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_006.jpeg" alt=""><div class="overlay"><span data-i18n="gal1">Stage • Leather</span></div></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_007.jpeg" alt=""><div class="overlay"><span data-i18n="gal2">Editorial</span></div></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_002.jpeg" alt=""><div class="overlay"><span data-i18n="gal3">Pool Dancer</span></div></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_005.jpeg" alt=""><div class="overlay"><span data-i18n="gal4">Playful Luxury</span></div></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_004.jpeg" alt=""><div class="overlay"><span data-i18n="gal5">Neon Stage</span></div></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_009.png" alt=""><div class="overlay"><span data-i18n="gal6">Street Glam</span></div></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_kunz_008.jpg" alt=""><div class="overlay"><span data-i18n="gal7">Fine Art</span></div></div>
+        <div class="gallery-item"><img src="https://raw.githubusercontent.com/keysikunz/personal.io/main/images/keysi_eyes_001.jpeg" alt=""><div class="overlay"><span data-i18n="gal8">Color Play</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title" data-i18n="services_title">WHAT I <span>OFFER</span></h2>
+      <p class="section-subtitle" data-i18n="services_sub">Elite experiences. Unforgettable energy.</p>
+      <div class="services-grid">
+        <div class="service-card"><div class="service-icon">✦</div><h3 data-i18n="svc1_t">Stage Shows</h3><p data-i18n="svc1_d">High-energy exotic dance and pole performances for clubs, parties, private events and festivals.</p></div>
+        <div class="service-card"><div class="service-icon">◈</div><h3 data-i18n="svc2_t">Pool Performances</h3><p data-i18n="svc2_d">Sensual, artistic pool dancing for luxury venues and exclusive experiences.</p></div>
+        <div class="service-card"><div class="service-icon">◆</div><h3 data-i18n="svc3_t">Fashion Modeling</h3><p data-i18n="svc3_d">High fashion, editorial, cyberpunk and commercial modeling for campaigns.</p></div>
+        <div class="service-card"><div class="service-icon">◇</div><h3 data-i18n="svc4_t">Content Creation</h3><p data-i18n="svc4_d">Exclusive digital content. Creative, bold and tailored to your brand.</p></div>
+        <div class="service-card"><div class="service-icon">◎</div><h3 data-i18n="svc5_t">Private Sessions</h3><p data-i18n="svc5_d">Exclusive private performances. Discreet and unforgettable.</p></div>
+        <div class="service-card"><div class="service-icon">◉</div><h3 data-i18n="svc6_t">Classes & Collabs</h3><p data-i18n="svc6_d">Pole classes and collaborations with fashion and nightlife brands.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bookings" class="bookings">
+    <div class="container">
+      <div class="booking-cta">
+        <h2 class="section-title" data-i18n="bookings_title">BOOKINGS</h2>
+        <p class="section-subtitle" data-i18n="bookings_sub">Ready to elevate your event?</p>
+        <p data-i18n="bookings_p">Whether you need a show-stopping performance, a model for your campaign, or a private experience — I deliver excellence every time.</p>
+        <div class="cta-group" style="justify-content:center">
+          <a href="https://wa.me/5212211957772" target="_blank" class="btn btn-primary" data-i18n="btn_whatsapp">WhatsApp</a>
+          <a href="https://t.me/Dalila_kunz" target="_blank" class="btn btn-outline">Telegram</a>
+          <a href="https://onlyfans.com/zzugu" target="_blank" class="btn btn-outline btn-of">OnlyFans</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="music" class="music-section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="music_title">MY <span>VIBE</span></h2>
+      <p class="section-subtitle" data-i18n="music_sub">Soundtrack of the night</p>
+      <div class="spotify-wrap">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3U5HvtDucK9D67hspy16IB?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="tiktok" class="tiktok-section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="tiktok_title">TIKTOK</h2>
+      <p class="section-subtitle" data-i18n="tiktok_sub">Mis últimos videos · @keysi_kunzz</p>
+      <div class="tiktok-frame" style="background:#fff;padding:1rem;">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@keysi_kunzz" data-unique-id="keysi_kunzz" data-embed-type="creator" style="max-width:780px;min-width:288px;margin:0 auto;">
+          <section><a target="_blank" href="https://www.tiktok.com/@keysi_kunzz?refer=creator_embed">@keysi_kunzz</a></section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos">
+    <div class="container">
+      <h2 class="section-title" data-i18n="videos_title">VIDEOS</h2>
+      <p class="section-subtitle" data-i18n="videos_sub">Stage energy • Pure performance</p>
+      <div class="gallery-grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+        <div class="gallery-item" style="aspect-ratio:9/16"><video src="https://raw.githubusercontent.com/keysikunz/personal.io/main/videos/keysi_kunz_001.MP4" controls playsinline muted loop style="width:100%;height:100%;object-fit:cover"></video></div>
+        <div class="gallery-item" style="aspect-ratio:9/16"><video src="https://raw.githubusercontent.com/keysikunz/personal.io/main/videos/keysi_kunz_002.MP4" controls playsinline muted loop style="width:100%;height:100%;object-fit:cover"></video></div>
+        <div class="gallery-item" style="aspect-ratio:9/16"><video src="https://raw.githubusercontent.com/keysikunz/personal.io/main/videos/keysi_kunz_003.MP4" controls playsinline muted loop style="width:100%;height:100%;object-fit:cover"></video></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title" data-i18n="contact_title">GET IN <span>TOUCH</span></h2>
+      <p class="section-subtitle" data-i18n="contact_sub">Let's create something legendary</p>
+      <div style="text-align:center;margin-bottom:3rem">
+        <a href="https://wa.me/5212211957772" target="_blank" class="btn btn-primary" style="font-size:1.05rem;padding:1.1rem 2.5rem" data-i18n="btn_wa_big">CONTACT ME ON WHATSAPP</a>
+        <p style="margin-top:1rem;color:var(--dim);font-size:.95rem">+52 1 221 195 7772</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3 data-i18n="contact_direct">Direct Contact</h3>
+          <div class="social-btns">
+            <a href="https://www.instagram.com/keysi.kunz/" target="_blank" rel="noopener" class="social-btn ig"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg> Instagram</a>
+            <a href="https://www.tiktok.com/@keysi_kunzz" target="_blank" rel="noopener" class="social-btn tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg> TikTok</a>
+            <a href="https://x.com/Dalila_Kunzz" target="_blank" rel="noopener" class="social-btn x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.727-8.821L1.54 2.25h7.914l4.259 5.68L18.244 2.25zM17.21 20.03h1.833L6.983 3.935H5.017z"/></svg> X</a>
+            <a href="https://www.facebook.com/profile.php?id=61595880147457" target="_blank" rel="noopener" class="social-btn fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook</a>
+            <a href="https://onlyfans.com/zzugu" target="_blank" rel="noopener" class="social-btn of"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3.5c1.93 0 3.5 1.57 3.5 3.5S13.93 12.5 12 12.5 8.5 10.93 8.5 9 10.07 5.5 12 5.5zm0 14.5c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg> OnlyFans</a>
+            <a href="https://t.me/+fgLO-B1Mq0QxZWQx" target="_blank" rel="noopener" class="social-btn tg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.15 1.568-.769 5.233-1.087 6.941-.134.72-.397 1.001-.652 1.026-.552.05-1.06-.34-1.646-.666-.914-.51-1.43-.826-2.316-1.323-1.027-.593-.36-1.004.225-1.56.153-.146 2.81-2.575 2.86-2.796.006-.028.014-.136-.05-.193-.064-.057-.158-.037-.226-.022-.102.022-1.73 1.1-4.883 3.23-.462.318-.88.473-1.255.466-.413-.007-1.207-.233-1.797-.425-.724-.237-1.3-.364-1.25-.77.026-.21.396-.427 1.09-.647 4.27-1.857 7.12-3.082 8.55-3.685.814-.33 1.963-.72 2.306-.74z"/></svg> TG Channel</a>
+            <a href="https://t.me/Dalila_kunz" target="_blank" rel="noopener" class="social-btn tg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.15 1.568-.769 5.233-1.087 6.941-.134.72-.397 1.001-.652 1.026-.552.05-1.06-.34-1.646-.666-.914-.51-1.43-.826-2.316-1.323-1.027-.593-.36-1.004.225-1.56.153-.146 2.81-2.575 2.86-2.796.006-.028.014-.136-.05-.193-.064-.057-.158-.037-.226-.022-.102.022-1.73 1.1-4.883 3.23-.462.318-.88.473-1.255.466-.413-.007-1.207-.233-1.797-.425-.724-.237-1.3-.364-1.25-.77.026-.21.396-.427 1.09-.647 4.27-1.857 7.12-3.082 8.55-3.685.814-.33 1.963-.72 2.306-.74z"/></svg> TG Private</a>
+            <a href="https://wa.me/5212211957772" target="_blank" rel="noopener" class="social-btn wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-info">
+          <h3 data-i18n="contact_based">Based In</h3>
+          <p style="color:var(--dim);font-size:1.15rem;margin-bottom:1.5rem">Puebla, México<br><span style="color:var(--cyan)" data-i18n="contact_worldwide">Available worldwide</span></p>
+          <p style="color:var(--dim)" data-i18n="contact_note">For bookings, collaborations and private inquiries — WhatsApp, Telegram or OnlyFans. Response within 24–48h.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="#" class="logo">KEYSI KUNZ</a>
+    <p data-i18n="footer">Keysi Kunz — Pop · K-Pop · Otaku © 2026</p>
+    <p style="margin-top:.5rem;font-size:.8rem" data-i18n="footer_sub">Pool Dancer • Top Performer • K-Pop • Otaku</p>
+  </footer>
+
+  <script>
+    const slides=document.querySelectorAll('#heroMedia img,#heroMedia video');
+    const dotsEl=document.getElementById('heroDots');
+    let idx=0;
+    slides.forEach((_,i)=>{const d=document.createElement('span');if(i===0)d.classList.add('active');d.onclick=()=>go(i);dotsEl.appendChild(d)});
+    function go(i){slides[idx].classList.remove('active');dotsEl.children[idx].classList.remove('active');idx=i;slides[idx].classList.add('active');dotsEl.children[idx].classList.add('active')}
+    setInterval(()=>go((idx+1)%slides.length),4000);
+    const i18n={es:{nav_about:"Sobre mí",nav_portfolio:"Portfolio",nav_services:"Servicios",nav_bookings:"Reservas",nav_music:"Música",nav_tiktok:"TikTok",nav_videos:"Videos",nav_contact:"Contacto",tagline:"Pool Dancer • Top Performer • Otaku",subtitle:"The Ultimate Pop & K-Pop Queen.<br>Top Model • Bailarina Exótica • Pool Performer.<br>De Puebla para el mundo.",stat_stages:"Escenarios",stat_empire:"Imperio",btn_book:"Reservar",btn_portfolio:"Ver Portfolio",about_title:"SOBRE <span>MÍ</span>",about_sub:"Nacida para dominar la noche neón",about_p1:"Soy <strong>Keysi Kunz</strong> — basada en Puebla, México, pero mi escenario es el mundo entero. Viajera. Creadora. Performer.",about_p2:"Fusiono el <strong>pool dance</strong> con la energía del pop, K-pop y otaku. Estética Cyber Otaku, siluetas de lujo y presencia de escenario pura.",about_p3:"Mi misión es clara — ser la bailarina exótica y pool performer más icónica del planeta y construir un imperio de moda neón.",tag1:"Pool Dancer",tag2:"Pole Dance",tag3:"Pool Performances",tag4:"Creadora de Contenido",tag5:"Cyber Otaku",tag6:"K-Pop",portfolio_title:"PORTFOLIO",portfolio_sub:"Moda • Danza • Presencia Pura",gal1:"Escenario • Cuero",gal2:"Editorial",gal3:"Pool Dancer",gal4:"Lujo Juguetón",gal5:"Escenario Neón",gal6:"Street Glam",gal7:"Fine Art",gal8:"Color Play",services_title:"LO QUE <span>OFREZCO</span>",services_sub:"Experiencias élite. Energía inolvidable.",svc1_t:"Shows en Escenario",svc1_d:"Performances de baile exótico y pole para clubs, parties, eventos privados y festivales.",svc2_t:"Pool Performances",svc2_d:"Baile de piscina sensual y artístico para venues de lujo.",svc3_t:"Modelaje de Moda",svc3_d:"Alta moda, editorial, cyberpunk y comercial para campañas.",svc4_t:"Creación de Contenido",svc4_d:"Contenido digital exclusivo. Creativo, audaz y a medida.",svc5_t:"Sesiones Privadas",svc5_d:"Performances privadas exclusivas. Discretas e inolvidables.",svc6_t:"Clases y Collabs",svc6_d:"Clases de pole y colaboraciones con marcas de moda y nightlife.",bookings_title:"RESERVAS",bookings_sub:"¿Lista para elevar tu evento?",bookings_p:"Show impactante, modelo para campaña o experiencia privada — excelencia siempre.",btn_whatsapp:"WhatsApp",music_title:"MI <span>VIBE</span>",music_sub:"Soundtrack de la noche",tiktok_title:"TIKTOK",tiktok_sub:"Mis últimos videos · @keysi_kunzz",videos_title:"VIDEOS",videos_sub:"Energía de escenario • Performance pura",contact_title:"PONTE EN <span>CONTACTO</span>",contact_sub:"Creemos algo legendario",btn_wa_big:"CONTÁCTAME POR WHATSAPP",contact_direct:"Contacto Directo",contact_based:"Basada en",contact_worldwide:"Disponible en todo el mundo",contact_note:"Reservas, colaboraciones e inquiries privadas — WhatsApp, Telegram u OnlyFans. Respuesta en 24–48h.",footer:"Keysi Kunz — Pop · K-Pop · Otaku © 2026",footer_sub:"Pool Dancer • Top Performer • K-Pop • Otaku"},en:{nav_about:"About",nav_portfolio:"Portfolio",nav_services:"Services",nav_bookings:"Bookings",nav_music:"Music",nav_tiktok:"TikTok",nav_videos:"Videos",nav_contact:"Contact",tagline:"Pool Dancer • Top Performer • Otaku",subtitle:"The Ultimate Pop & K-Pop Queen.<br>Top Model • Exotic Dancer • Pool Performer.<br>From Puebla to the world.",stat_stages:"Stages",stat_empire:"Empire",btn_book:"Book Now",btn_portfolio:"View Portfolio",about_title:"ABOUT <span>ME</span>",about_sub:"Born to dominate the neon night",about_p1:"I am <strong>Keysi Kunz</strong> — based in Puebla, Mexico, but my stage is the entire world. Traveler. Creator. Performer.",about_p2:"I merge <strong>pool dance</strong> with the energy of pop, K-pop and otaku stages. Cyber Otaku aesthetics, luxury silhouettes, pure stage presence.",about_p3:"My mission is clear — to become the most iconic exotic dancer and pool performer while building a neon fashion empire.",tag1:"Pool Dancer",tag2:"Pole Dance",tag3:"Pool Performances",tag4:"Content Creator",tag5:"Cyber Otaku",tag6:"K-Pop",portfolio_title:"PORTFOLIO",portfolio_sub:"Fashion • Dance • Pure Presence",gal1:"Stage • Leather",gal2:"Editorial",gal3:"Pool Dancer",gal4:"Playful Luxury",gal5:"Neon Stage",gal6:"Street Glam",gal7:"Fine Art",gal8:"Color Play",services_title:"WHAT I <span>OFFER</span>",services_sub:"Elite experiences. Unforgettable energy.",svc1_t:"Stage Shows",svc1_d:"High-energy exotic dance and pole for clubs, parties, private events and festivals.",svc2_t:"Pool Performances",svc2_d:"Sensual, artistic pool dancing for luxury venues.",svc3_t:"Fashion Modeling",svc3_d:"High fashion, editorial, cyberpunk and commercial modeling.",svc4_t:"Content Creation",svc4_d:"Exclusive digital content. Creative, bold and tailored.",svc5_t:"Private Sessions",svc5_d:"Exclusive private performances. Discreet and unforgettable.",svc6_t:"Classes & Collabs",svc6_d:"Pole classes and collaborations with fashion and nightlife brands.",bookings_title:"BOOKINGS",bookings_sub:"Ready to elevate your event?",bookings_p:"Show-stopping performance, model for your campaign, or private experience — excellence every time.",btn_whatsapp:"WhatsApp",music_title:"MY <span>VIBE</span>",music_sub:"Soundtrack of the night",tiktok_title:"TIKTOK",tiktok_sub:"My latest videos · @keysi_kunzz",videos_title:"VIDEOS",videos_sub:"Stage energy • Pure performance",contact_title:"GET IN <span>TOUCH</span>",contact_sub:"Let's create something legendary",btn_wa_big:"CONTACT ME ON WHATSAPP",contact_direct:"Direct Contact",contact_based:"Based In",contact_worldwide:"Available worldwide",contact_note:"Bookings, collaborations and private inquiries — WhatsApp, Telegram or OnlyFans. Response within 24–48h.",footer:"Keysi Kunz — Pop · K-Pop · Otaku © 2026",footer_sub:"Pool Dancer • Top Performer • K-Pop • Otaku"},de:{nav_about:"Über mich",nav_portfolio:"Portfolio",nav_services:"Services",nav_bookings:"Buchungen",nav_music:"Musik",nav_tiktok:"TikTok",nav_videos:"Videos",nav_contact:"Kontakt",tagline:"Pool Dancer • Top Performer • Otaku",subtitle:"The Ultimate Pop & K-Pop Queen.<br>Top Model • Exotic Dancer • Pool Performer.<br>Von Puebla in die Welt.",stat_stages:"Bühnen",stat_empire:"Empire",btn_book:"Jetzt buchen",btn_portfolio:"Portfolio ansehen",about_title:"ÜBER <span>MICH</span>",about_sub:"Geboren, um die Neon-Nacht zu beherrschen",about_p1:"Ich bin <strong>Keysi Kunz</strong> — basierend in Puebla, Mexiko, aber meine Bühne ist die ganze Welt. Reisende. Creatorin. Performerin.",about_p2:"Ich verbinde <strong>Pool Dance</strong> mit der Energie von Pop, K-Pop und Otaku. Cyber Otaku Ästhetik, luxuriöse Silhouetten, pure Bühnenpräsenz.",about_p3:"Meine Mission ist klar — die ikonischste Exotic Dancer und Pool Performer zu werden und ein Neon-Fashion-Empire aufzubauen.",tag1:"Pool Dancer",tag2:"Pole Dance",tag3:"Pool Performances",tag4:"Content Creator",tag5:"Cyber Otaku",tag6:"K-Pop",portfolio_title:"PORTFOLIO",portfolio_sub:"Fashion • Dance • Pure Presence",gal1:"Bühne • Leder",gal2:"Editorial",gal3:"Pool Dancer",gal4:"Playful Luxury",gal5:"Neon Stage",gal6:"Street Glam",gal7:"Fine Art",gal8:"Color Play",services_title:"WAS ICH <span>BIETE</span>",services_sub:"Elite-Erlebnisse. Unvergessliche Energie.",svc1_t:"Bühnenshows",svc1_d:"Hochenergetische Exotic Dance und Pole für Clubs, Parties und Festivals.",svc2_t:"Pool Performances",svc2_d:"Sinnlicher, künstlerischer Pool Dance für Luxus-Locations.",svc3_t:"Fashion Modeling",svc3_d:"High Fashion, Editorial, Cyberpunk und Commercial Modeling.",svc4_t:"Content Creation",svc4_d:"Exklusiver digitaler Content. Kreativ, mutig und maßgeschneidert.",svc5_t:"Private Sessions",svc5_d:"Exklusive private Performances. Diskret und unvergesslich.",svc6_t:"Kurse & Collabs",svc6_d:"Pole-Kurse und Kollaborationen mit Fashion- und Nightlife-Labels.",bookings_title:"BUCHUNGEN",bookings_sub:"Bereit, dein Event zu erheben?",bookings_p:"Showstoppende Performance, Model für Kampagne oder privates Erlebnis — Exzellenz jedes Mal.",btn_whatsapp:"WhatsApp",music_title:"MEIN <span>VIBE</span>",music_sub:"Soundtrack der Nacht",tiktok_title:"TIKTOK",tiktok_sub:"Meine neuesten Videos · @keysi_kunzz",videos_title:"VIDEOS",videos_sub:"Bühnenenergie • Pure Performance",contact_title:"KONTAKT <span>AUFNEHMEN</span>",contact_sub:"Lass uns etwas Legendäres schaffen",btn_wa_big:"KONTAKTIERE MICH PER WHATSAPP",contact_direct:"Direkter Kontakt",contact_based:"Basierend in",contact_worldwide:"Weltweit verfügbar",contact_note:"Buchungen, Kollaborationen und private Anfragen — WhatsApp, Telegram oder OnlyFans. Antwort in 24–48h.",footer:"Keysi Kunz — Pop · K-Pop · Otaku © 2026",footer_sub:"Pool Dancer • Top Performer • K-Pop • Otaku"}};
+    function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));const t=i18n[lang];document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(t[k]!==undefined)el.innerHTML=t[k]});localStorage.setItem('keysi_lang',lang)}
+    document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+    setLang(localStorage.getItem('keysi_lang')||'es');
+  </script>
+</body>
+</html>
